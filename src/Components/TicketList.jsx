@@ -12,7 +12,7 @@ function TicketList() {
   const {ticketList, filter} = useSelector((state) => state.tickets);
   const filteredTicketList = ticketList.filter((ticket) => filter.includes(ticket.stops)).sort((a,b) => a.price - b.price);
   const [showModal, setShowModal] = useState(false);
-  
+
   return (
     <>
       <Col className="d-flex flex-column h-100 p-0">

@@ -1,5 +1,5 @@
 server:
-	json-server -p 4000 tickets.json
+	json-server -p 8000 tickets.json
 
 app:
 	npm run build
