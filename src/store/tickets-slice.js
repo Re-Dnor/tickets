@@ -10,7 +10,7 @@ const initialState = {
 export const loadTickets = createAsyncThunk(
   '@@tickets/loading',
   () => {
-    return axios.get('http://localhost:4000/tickets')
+    return axios.get('http://localhost:8000/tickets')
   })
 
 const ticketsSlice = createSlice({
