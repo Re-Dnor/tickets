@@ -10,7 +10,7 @@ const initialState = {
 export const loadTickets = createAsyncThunk(
   '@@tickets/loading',
   () => {
-    return axios.get('https://tickets-app-test-work.herokuapp.com//tickets');
+    return axios.get('https://my-json-server.typicode.com/Re-Dnor/tickets');
   })
 
 const ticketsSlice = createSlice({
