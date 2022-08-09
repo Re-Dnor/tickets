@@ -17,7 +17,6 @@ function CheckboxTransplants() {
   const chekedKeys = Object.keys(checked);
 
   const handleChangeCheckbox = (e) => {
-    console.log(e.target)
     const name = e.target.name
     setCheked(
       { ...checked,
