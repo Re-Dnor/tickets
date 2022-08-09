@@ -11,22 +11,22 @@ function ToggleButtonExample() {
 
   useEffect(() => {
     dispatch(setCurrency(currentCurrency))
-  }, [currentCurrency])
+  }, [currentCurrency, dispatch])
 
   return (
     <ButtonGroup type="checkbox" className='ps-4'>
       {currencyArray.map((btn, index) => 
-      <ToggleButton 
-        key={index}
-        id={index} 
-        type="radio"
-        variant={currentCurrency === btn ? 'primary' : 'outline-primary'}
-        checked={currentCurrency === btn}
-        value={btn} 
-        onChange={(e) => setCurrentCurrency(e.target.value)}
+        <ToggleButton 
+          key={index}
+          id={index} 
+          type="radio"
+          variant={currentCurrency === btn ? 'primary' : 'outline-primary'}
+          checked={currentCurrency === btn}
+          value={btn} 
+          onChange={(e) => setCurrentCurrency(e.target.value)}
         >
           {btn.toUpperCase()}
-      </ToggleButton>
+        </ToggleButton>
       )}
     </ButtonGroup>
   );

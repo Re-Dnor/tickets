@@ -22,9 +22,9 @@ function CurrencyButton({ticket, setShowModal}) {
 
   return ( 
   <Button
-  className='mt-3'
-  variant="primary"
-  onClick={() => setShowModal(true)}
+    className='mt-3'
+    variant="primary"
+    onClick={() => setShowModal(true)}
   >
     Купить за {getValue(ticket.price)}
   </Button>

@@ -26,21 +26,21 @@ function CheckboxTransplants() {
 
   useEffect(() => {
     dispatch(setFilter(checked));
-  }, [checked])
+  }, [checked, dispatch])
 
   return ( 
     <div className="ps-4">
     <Form>
       {chekedKeys.map((key) => 
       <Form.Check 
-      key={_.uniqueId('checkbox_')}
-      type={'checkbox'}
-      value={key}
-      checked={checked[key]}
-      id={_.uniqueId('checkbox_')}
-      label={getStops[key]}
-      name={key}
-      onChange={handleChangeCheckbox}
+        key={_.uniqueId('checkbox_')}
+        type={'checkbox'}
+        value={key}
+        checked={checked[key]}
+        id={_.uniqueId('checkbox_')}
+        label={getStops[key]}
+        name={key}
+        onChange={handleChangeCheckbox}
       />
       )}
     </Form>
